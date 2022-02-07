@@ -22,14 +22,15 @@ header{
     background-size:cover;
     background-attachment:fixed;
 
-    padding-top:25vh;
+    padding-top:60vh;
 }
 header h1{
     font-family: 'Quintessential', georgia, serif;
     font-size:3.5em;
     margin:0px auto;
     color:white;
-    background-image:linear-gradient(to right, transparent, var(--cor2), transparent)
+   /* background-image:linear-gradient(to right, transparent, #734906d7, transparent);*/
+    display:inline-block;
 }
 header a{
     text-decoration:none;
@@ -38,14 +39,27 @@ header p{
     margin-bottom:0px;
 }
 nav{
-    background-color:var(--cor2);
+   /* background-color:#734906d7;*/
     padding:8px;
+    display:inline-block;
+
+}
+header div{
+    background-color:#7349067a;
+    position:fixed;
+    top:0px;
+    width:100%;
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    align-items:center;
 }
 nav a{
     color:white;
     padding:8px 12px;
     margin:0px 20px;
     font-weight:bold;
+    border-radius:3px;
 }
 nav a:hover{
     color:var(--cor2);
@@ -58,12 +72,30 @@ main{
     margin:auto;
 }
 main h2{
-    margin-top:0px;
+    margin:25px auto 0px auto;
     font-family: 'Quintessential', georgia, serif;
-    font-size:2.6em;
+    font-size:3em;
     color:var(--cor3);
 }
-p{
+.container{
+    display:flex;
+    flex-wrap:wrap;
+}
+.item{
+    min-width:350px;
+    width:50%;
+    max-width:450px;
+    margin: auto;
+    flex-grow:1;
+}
+main img{
+    min-width:350px;
+    width:50%;
+    flex-grow:1;
+    padding:25px 0px;
+}
+main p{
     text-align:justify;
     font-size:1.3em;
+    margin:0px 35px 35px 35px;
 }
