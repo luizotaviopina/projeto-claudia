@@ -18,11 +18,11 @@ body{
 header{
     background-color:var(--cor1);
     background-image:url(imagens/fundo.jpg);
-    background-position:right center;
+    background-position:5% 100%;
     background-size:cover;
     background-attachment:fixed;
 
-    padding-top:60vh;
+    height:70vh;
 }
 header h1{
     font-family: 'Quintessential', georgia, serif;
@@ -89,13 +89,14 @@ main h2{
     flex-grow:1;
 }
 main img{
-    min-width:350px;
+    min-width:375px;
     width:50%;
     flex-grow:1;
     padding:25px 0px;
 }
 main p{
     text-align:justify;
-    font-size:1.3em;
-    margin:0px 35px 35px 35px;
+    font-size:1.5em;
+    margin:0px 45px 45px 45px;
+    text-indent:25px;
 }
