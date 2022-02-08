@@ -84,7 +84,7 @@ main h2{
 .item{
     min-width:350px;
     width:50%;
-    max-width:450px;
+
     margin: auto;
     flex-grow:1;
 }
@@ -92,6 +92,7 @@ main img{
     min-width:375px;
     width:50%;
     flex-grow:1;
+
     padding:25px 0px;
 }
 main p{
