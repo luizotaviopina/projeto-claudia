@@ -8,34 +8,34 @@
     <link href="estilo.css" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <div class="cabecalho">
+    <div class="container">
+        <header>
             <a href="#">
                 <h1>Claudia Pina</h1>
             </a>
             <nav>
-                <a href="#">Início</a><a href="#">Aulas</a><a href="#">Contato</a>
+                <a href="#">Início</a><a href="#">Sobre</a><a href="#">Aulas</a><a href="#">Contato</a>
             </nav>
-        </div>
-    </header>
-    <main>
-        <div class="container">
-            <div class="item">
-                <h2>Peças únicas</h2>
-                <p>Com mais de 30 anos de experiência, Claudia produz com exclusividade para que você possa se sentir tendo algo unicamente seu. As peças seguem os mais diversos estilos e materiais, oferecendo versatilidade, qualidade e profissionalismo.</p>
-            </div>
-            <img class="foto1" src="imagens/foto1.jpg" alt="Jarro de Porcelana em Estilo Oriental">
-        </div>
-        <div class="container">
-            <img src="imagens/foto1.jpg" alt="Jarro de Porcelana em Estilo Oriental">
-            <div class="item">
-                <h2>Feitas a mão</h2>
-                <p>As peças podem ser feitas sob encomenda ou adquiridas do nosso limitado estoque. Todas feitas artesanalmente, com o amor de alguém apaixonado pelo que faz, e com a qualidade de uma artista reconhecida internacionalmente.</p>
-            </div>
-        </div>
-    </main>
-    <footer>
-        <p>&copy;Site desenvolvido por <a href="#" target="_blank">Luiz Otávio Pina</a></p>
-    </footer>
+        </header>
+        <main>
+            <ul class="slider">
+                <li>
+                    <input type="radio" id="slide1" name="slide" checked>
+                    <label for="slide1"></label>
+                    <div class="fotos"></div>
+                </li>
+                <li>
+                    <input type="radio" id="slide2" name="slide">
+                    <label for="slide2"></label>
+                    <div class="fotos"></div>
+                </li>
+                <li>
+                    <input type="radio" id="slide3" name="slide">
+                    <label for="slide3"></label>
+                    <div class="fotos"></div>
+                </li>
+            </ul>
+        </main>
+    </div>
 </body>
 </html>
