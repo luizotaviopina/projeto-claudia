@@ -1,6 +1,6 @@
 @charset "utf-8";
 
-@import url('https://fonts.googleapis.com/css2?family=Quintessential&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Quintessential&display=swap');
 
 *{
     margin:0px;
@@ -50,6 +50,9 @@ nav a{
 nav a:hover{
     border-bottom:5px solid var(--cor1);
     padding-bottom:10px;
+}
+nav a:active{
+    background-image:linear-gradient(to top, var(--cor2),var(--cor3));
 }
 
 /*Configurações pro Slider da página principal*/
@@ -142,24 +145,27 @@ nav a:hover{
     display:flex;
     flex-wrap:wrap;
     align-items:center;
+    flex-direction:row;
 }
 .sobre h2{
-    font-family:'Quintessential', Georgia, serif;
+    font-family: 'Libre Baskerville', serif;
     font-size:2em;
     font-weight:bold;
     color:var(--cor3);
+    padding:10px;
 }
 .sobre article{
     padding:25px 45px 45px 45px;
     width: 45%;
-    min-width:285px;
+    min-width:290px;
     margin:auto;
 }
 .sobre p{
     text-align:justify;
+    text-align-last: left;
 }
 .sobre figure{
-    min-width:285px;
+    min-width:290px;
     height:79vh;
     width:45%;
     background-image:url(imagens/foto1-m.jpg);
@@ -170,4 +176,65 @@ nav a:hover{
     .sobre figure {
         height:86vh;
     }
-}    
+}
+/*Configurações específicas para o Aulas*/
+.aulas ul{
+    list-style:inside;
+    padding:25px 45px 45px 45px;
+    margin:auto;
+}
+.aulas li{
+    padding-bottom:8px;
+}
+.aulas figure{
+    background-image:url(imagens/foto2-m.jpg);
+    background-size:cover;
+    width:100%;
+    height:290px;
+}
+@media (min-width:613px){
+    .aulas figure{
+        background-image:url(imagens/foto2.jpg);
+    }
+    .aulas ul{
+        padding-left:0px;
+    }
+}
+/*Configurações específicas para o Contato*/
+.redes {
+    margin-top:15px;
+    display:flex;
+    justify-content:space-around;
+}
+.redes a{
+    display:block;
+}
+.mapa{
+    width:40%;
+    min-width:325px;
+    margin:auto;
+    padding:10px;
+    
+}
+@media (max-width:800px){
+    .mapa {
+        width:100%;
+    }
+}
+.sobre iframe{
+    width:100%;
+}
+footer{
+    background-color:var(--cor3);
+    color:white;
+    text-align:center;
+    padding:5px 0px;
+    position:fixed;
+    bottom:0px;
+    width:100%;
+}
+footer a{
+    font-weight:bold;
+    color:white;
+    text-decoration:none;
+}
