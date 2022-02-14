@@ -16,7 +16,7 @@
 }
 body{
     font-family:Verdana, Geneva, Tahoma, sans-serif;
-    background-color:var(--cor1);
+    background-color:var(--cor3);
 }
 p{
     text-indent:20px;
@@ -88,23 +88,23 @@ nav a:active{
 }
 .slider label{
     display:block;
-    width:20px;
-    height:20px;
+    width:35px;
+    height:10px;
     background-color:var(--cor0);
-    border-radius:50%;
+    border-radius:15%;
     position:absolute;
     cursor:pointer;
     z-index:10;
     top:10px;
 }
 .slider li:nth-child(1) label{
-    left:44%;
+    left:40%;
 }
 .slider li:nth-child(2) label{
     left:50%;
 }
 .slider li:nth-child(3) label{
-    left:56%;
+    left:60%;
 }
 .slider div{
     opacity:0;
