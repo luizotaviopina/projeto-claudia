@@ -149,7 +149,7 @@ nav a:active{
 }
 .sobre article{
     padding:25px 45px 45px 45px;
-    width: 95%;
+    width: 90%;
     margin:auto;
 }
 @media(min-width:700px){
@@ -178,7 +178,7 @@ nav a:active{
 @media (min-width:700px){
     .sobre figure {
         height:86vh;
-        width:43%
+        width:43%;
     }
 }
 /*Configurações específicas para o Aulas*/
