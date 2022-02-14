@@ -148,9 +148,14 @@ nav a:active{
     flex-direction:row;
 }
 .sobre article{
-    padding:25px 45px 45px 45px;
+    padding:25px 25px 25px 25px;
     width: 90%;
     margin:auto;
+}
+@media (min-width:400px){
+    .sobre article{
+        padding:25px 45px 45px 45px;
+    }
 }
 @media(min-width:700px){
     .sobre article{
