@@ -42,7 +42,7 @@ header > a{
 nav a{
     color:white;
     text-decoration:none;
-    padding:15px;
+    padding:15px 10px;
     display:inline-block;
     font-weight:bold;
     font-size:1em;
@@ -147,34 +147,38 @@ nav a:active{
     align-items:center;
     flex-direction:row;
 }
-.sobre h2{
+.sobre article{
+    padding:25px 45px 45px 45px;
+    width: 95%;
+    margin:auto;
+}
+@media(min-width:700px){
+    .sobre article{
+        width: 43%;
+    }
+}
+.sobre article h2{
     font-family: 'Libre Baskerville', serif;
     font-size:2em;
     font-weight:bold;
     color:var(--cor3);
     padding:10px;
 }
-.sobre article{
-    padding:25px 45px 45px 45px;
-    width: 45%;
-    min-width:290px;
-    margin:auto;
-}
-.sobre p{
+.sobre article p{
     text-align:justify;
     text-align-last: left;
 }
 .sobre figure{
-    min-width:290px;
     height:79vh;
-    width:45%;
+    width:95%;
     background-image:url(imagens/foto1-m.jpg);
     background-position:cover;
     margin:auto;
 }
-@media (min-width:613px){
+@media (min-width:700px){
     .sobre figure {
         height:86vh;
+        width:43%
     }
 }
 /*Configurações específicas para o Aulas*/
@@ -190,7 +194,7 @@ nav a:active{
     background-image:url(imagens/foto2-m.jpg);
     background-size:cover;
     width:100%;
-    height:290px;
+    height: 234px;
 }
 @media (min-width:613px){
     .aulas figure{
@@ -211,12 +215,11 @@ nav a:active{
 }
 .mapa{
     width:40%;
-    min-width:325px;
     margin:auto;
     padding:10px;
     
 }
-@media (max-width:800px){
+@media (max-width:700px){
     .mapa {
         width:100%;
     }
@@ -227,6 +230,7 @@ nav a:active{
 footer{
     background-color:var(--cor3);
     color:white;
+    font-size:0.8em;
     text-align:center;
     padding:5px 0px;
     position:fixed;
