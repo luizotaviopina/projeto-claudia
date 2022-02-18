@@ -4,18 +4,66 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Claudia Pina</title>
+    <title>Spotify</title>
     <link rel="stylesheet" href="estilo.css">
 </head>
-<body>
+<body onload="inicio()">
     <header>
-        <h1>Claudia Pina</h1>
+        <a href="index.html">
+            <!--Acertar o nome depois!-->
+            <h1>Spotify</h1>
+        </a>
+        <input type="radio" name="menu" id="menu-mobile1">
+        <input type="radio" name="menu" id="menu-mobile2" checked>
+        <label for="menu-mobile1" id="botao1">
+            <div id="linhas">
+                <div class="linha-menu1"></div>
+                <div class="linha-menu1"></div>
+                <div class="linha-menu1"></div>
+            </div>
+        </label for="menu-mobile">
+        <label for="menu-mobile2" id="botao2">
+            <div class="cruz" id="cruz1"></div>
+            <div class="cruz" id="cruz2"></div>
+        </label for="menu-mobile">
         <nav>
-            <a href="index.html">Início</a><a href="sobre.html">Sobre</a><a href="aulas.html">Aulas</a><a href="contato.html">Contato</a>
+            <a href="index.html">Opção 1</a>
+            <a href="sobre.html">Opção 2</a>
+            <a href="aulas.html">Opção 3</a>
+            <a href="contato.html">Opção 4</a>
         </nav>
     </header>
     <main>
+        <div class="slider">
+            <input type ="radio" name="imagens" id="i1" checked>
+            <input type="radio" name="imagens" id="i2">
+            <input type="radio" name="imagens" id="i3">
+            <!--Acertar os atributos SRC e ALT aqui embaixo!-->
+            <div class="slide" id="um">
+                <img ="imagens/foto1-m.jpg" ="Jarro de Porcelana em Estilo Oriental">
+                <label for="i3" class="prev"><span></span></label>
+                <label for="i2" class="next"><span></span></label>
+            </div>
+            <div class="slide" id="dois">
+                <img ="imagens/foto2-m.jpg" ="Jarro de Porcelana em Estilo Oriental">
+                <label for="i1" class="prev"><span></span></label>
+                <label for="i3" class="next"><span></span></label>
+            </div>
+            <div class="slide" id="tres">
+                <img ="imagens/foto3-m.jpg" ="Jarro de Porcelana em Estilo Oriental">
+                <label for="i2" class="prev"><span></span></label>
+                <label for="i1" class="next"><span></span></label>
+            </div>
+            <div id="nav-slide">
+                <label for="i1" class="dots" id="dot1"></label>
+                <label for="i2" class="dots" id="dot2"></label>
+                <label for="i3" class="dots" id="dot3"></label>
+            </div>
+        </div>
+        <aside>
 
+        </aside>
     </main>
+    <!--<script src="script.js"></script>-->
 </body>
 </html>
