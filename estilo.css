@@ -124,7 +124,8 @@ header nav a:active{
         flex-wrap:wrap;
         align-content:space-around;
         width:50%;
-        height:100vh;
+        height:calc(100vh - 40px);
+        padding:20px 0px;
         text-align:center;
         transition-duration:0.5s;
     }    
@@ -157,7 +158,7 @@ header nav a:active{
 /*Menu mobile para mini mini telas*/
 @media (max-width:450px){
     header {
-        padding:5px 20px;
+        padding:5px 30px;
     }
     header h1{
         font-size:2.2em;
@@ -168,10 +169,15 @@ header nav a:active{
         height:45px;
     }
     header nav{
-        padding:20px 0px;
+        height:calc(100vh - 80px);
+        padding:40px 0px;
+ 
     }
     header nav a{
         font-size:1.2em;
+    }
+    header .linha-menu1 {
+        height:13%;
     }
 }
 
@@ -322,10 +328,26 @@ main #tres{
 }
 /*Slider para mini mini telas*/
 @media (max-width:450px){
+    header{
+        width:calc(100vw - 40px);
+        padding: 5px 20px;
+    }
     .prev,
     .next{
         height:40px;
         width:40px;
+    }
+    .prev span,
+    .next span{
+        border:solid 12px;
+    }
+    .prev span{
+        border-color: transparent #fff transparent transparent;
+        right:45%;
+    }
+    .next span{
+        border-color: transparent  transparent transparent #fff;
+        left:45%;
     }
     .dots{
         height:10px;
@@ -375,11 +397,11 @@ section picture{
     }
 }
 
-/*Sobre*/
-.fundo{ /*Usado nos Sobre, Aulas e Contato*/
+/*Base para Sobre, Aulas e Contato*/
+.fundo{
     background-image:url(imagens/fundo-sobre.jpg);
 }
-.base{ /*Usado nos Sobre, Aulas e Contato*/
+.base{
     background-color:white;
     max-width:850px;
     height: calc(100vh - (10px + var(--altura-h1) + 1em + 30px));
@@ -388,6 +410,25 @@ section picture{
     border-radius:4px 4px 0px 0px;
     display:flex;
 }
+.base article h2{
+    font: normal bold 2em 'Libre Baskerville', times, serif;
+    margin-bottom:20px;
+    text-align:center;
+}
+.base article p{
+    font-size:1.1em;
+    text-align:justify;
+    text-indent:20px;
+    font-size:1.1em;
+}
+@media (max-width:780px){
+    .base{
+        flex-wrap:wrap;
+        height:auto;
+    }
+}
+
+/*Sobre*/
 .sobre figure{
     width:30%;
     height:calc(100vh - (10px + var(--altura-h1) + 1em + 60px));
@@ -400,20 +441,12 @@ section picture{
     height:calc(100vh - (10px + var(--altura-h1) + 1em + 60px));
     margin:15px;
     padding:0px 20px;
-    font-size:1.1em;
-    text-align:justify;
 }
 .sobre article h2{
     width:100%;
-    font: normal bold 2em 'Libre Baskerville', times, serif;
-    text-align:center;
-    margin-bottom:20px;
-}
-.sobre article p{
-    text-indent:20px;
 }
 @media (max-width:780px){
-    .base{ /*Usado nos Sobre, Aulas e Contato*/
+    .base{
         flex-wrap:wrap;
         height:auto;
     }
@@ -426,25 +459,26 @@ section picture{
         height:auto;
     }
 }
+/*Sobre em mini mini telas*/
+@media (max-width:450px){
+    .base.sobre {
+        padding:10px 5px;
+    }
+    .base.sobre article{
+        margin:20px 15px;
+        padding:0px;
+    }
+}
 
 /*Aulas*/
 .aulas {
     height: calc(100vh - (10px + var(--altura-h1) + 1em + 60px));
     flex-wrap:wrap;
-    padding:30px
-}
-.aulas h2{
-    font: normal bold 2em 'Libre Baskerville', times, serif;
-    margin-bottom:20px;
+    padding:30px;
 }
 .aulas article{
     margin:0px 15px 15px 15px;
     width:calc(70% - 120px);
-}
-.aulas article p{
-    font-size:1.1em;
-    text-align:justify;
-    text-indent:20px;
 }
 .aulas ul{
     list-style:inside;
@@ -456,7 +490,6 @@ section picture{
 .aulas li{
     font-size:1.3em;
     line-height:1.6em;
-    width:100%;
 }
 .aulas figure{
     width:100%;
@@ -479,4 +512,46 @@ section picture{
         width:100%;
         height:30vh;
     }
+}
+@media (max-width:450px){
+    .aulas {
+        padding:10px 5px;
+    }
+    .aulas article{
+        margin:20px 15px;
+    }
+    .aulas ul{
+        margin: 0px 20px 20px 20px;
+    }
+}
+/*Contato*/
+.contato{
+    height:calc(100vh - (10px + var(--altura-h1) + 1em + 30px));
+}
+.contato article{
+    margin:30px;
+    margin-right:45px;
+}
+.contato article ul{
+    list-style:inside;
+}
+.contato li{
+    font-size:1.3em;
+    line-height:1.6em;
+}
+.contato .logos{
+    margin:30px;
+    display:flex;
+    justify-content:space-around;
+}
+.contato iframe{
+    height: calc(100vh - (10px + var(--altura-h1) + 1em + 30px));
+}
+footer {
+    padding: 5px 0px;
+}
+footer p{
+    font-size:0.8em;
+    text-align:center;
+
 }
