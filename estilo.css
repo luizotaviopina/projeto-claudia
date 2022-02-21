@@ -168,7 +168,7 @@ header nav a:active{
         height:45px;
     }
     header nav{
-        padding:10px;
+        padding:20px 0px;
     }
     header nav a{
         font-size:1.2em;
@@ -376,12 +376,13 @@ section picture{
 }
 
 /*Sobre*/
-.sobre{
+.fundo{ /*Usado nos Sobre, Aulas e Contato*/
     background-image:url(imagens/fundo-sobre.jpg);
 }
-.sobre main{
+.base{ /*Usado nos Sobre, Aulas e Contato*/
     background-color:white;
     max-width:850px;
+    height: calc(100vh - (10px + var(--altura-h1) + 1em + 30px));
     margin: calc(10px + var(--altura-h1) + 1em) auto 0px auto;
     padding:15px;
     border-radius:4px 4px 0px 0px;
@@ -412,7 +413,7 @@ section picture{
     text-indent:20px;
 }
 @media (max-width:780px){
-    .sobre main{
+    .base{ /*Usado nos Sobre, Aulas e Contato*/
         flex-wrap:wrap;
         height:auto;
     }
@@ -423,5 +424,59 @@ section picture{
     .sobre article{
         width:100%;
         height:auto;
+    }
+}
+
+/*Aulas*/
+.aulas {
+    height: calc(100vh - (10px + var(--altura-h1) + 1em + 60px));
+    flex-wrap:wrap;
+    padding:30px
+}
+.aulas h2{
+    font: normal bold 2em 'Libre Baskerville', times, serif;
+    margin-bottom:20px;
+}
+.aulas article{
+    margin:0px 15px 15px 15px;
+    width:calc(70% - 120px);
+}
+.aulas article p{
+    font-size:1.1em;
+    text-align:justify;
+    text-indent:20px;
+}
+.aulas ul{
+    list-style:inside;
+    width:30%;
+    margin:15px;
+    margin-top:calc(2em + 35px);
+    align-self:flex-start;
+}
+.aulas li{
+    font-size:1.3em;
+    line-height:1.6em;
+    width:100%;
+}
+.aulas figure{
+    width:100%;
+    height:30vh;
+    background-color:lightskyblue;
+}
+@media (max-width:780px){
+    .aulas{
+        height:auto;
+    }
+    .aulas article{
+        width:100%;
+        height:auto;
+    }
+    .aulas ul{
+        width:100%;
+        margin: 0px 30px 30px 30px;
+    }
+    .aulas figure{
+        width:100%;
+        height:30vh;
     }
 }
