@@ -102,8 +102,8 @@ header nav a:active{
     }
     header .cruz{
         display:block;
-        width:30px;
-        height:5px;
+        width:50%;
+        height:10%;
         position:absolute;
         background-color:white;
         top:50%;
@@ -152,6 +152,19 @@ header nav a:active{
         left:40%;
         transition-duration:0.5s;
         z-index:101;
+    }
+}/*Menu mobile para mini mini telas*/
+@media (max-width:450px){
+    header h1{
+        font-size:2em;
+    }
+    header #botao1,
+    header #botao2{
+        width:40px;
+        height:40px;
+    }
+    header nav a{
+        font-size:1.2em;
     }
 }
 
