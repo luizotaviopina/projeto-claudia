@@ -126,6 +126,8 @@ header nav a:active{
         transition-duration:0.5s;
     }    
     header nav a{
+        padding:0px;
+        margin:0px;
         width:100%;
     }
     header nav a:hover{
@@ -168,7 +170,6 @@ main .slide{
     width:100%;
     height:100%;
     z-index:-1;
-    background-attachment:fixed;
 }
 main #um{
     background-image:url(imagens/foto1.jpg);
