@@ -153,15 +153,22 @@ header nav a:active{
         transition-duration:0.5s;
         z-index:101;
     }
-}/*Menu mobile para mini mini telas*/
+}
+/*Menu mobile para mini mini telas*/
 @media (max-width:450px){
+    header {
+        padding:5px 20px;
+    }
     header h1{
-        font-size:2em;
+        font-size:2.2em;
     }
     header #botao1,
     header #botao2{
-        width:40px;
-        height:40px;
+        width:45px;
+        height:45px;
+    }
+    header nav{
+        padding:10px;
     }
     header nav a{
         font-size:1.2em;
@@ -312,6 +319,19 @@ main #tres{
     .next span{
         left:40%;
     }
+}
+/*Slider para mini mini telas*/
+@media (max-width:450px){
+    .prev,
+    .next{
+        height:40px;
+        width:40px;
+    }
+    .dots{
+        height:10px;
+    }
+
+
 }
 
 /*Galeria*/
