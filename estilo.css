@@ -1,12 +1,22 @@
 @charset "utf-8";
-@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Quintessential&display=swap');
+@font-face{
+    font-family:'Quintessential';
+    src:url('font/Quintessential-Regular.ttf') format('truetype');
+    font-weight:normal;
+    font-style:normal;
+};
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap');
 
+a{
+    text-decoration:none;
+}
 *{
+    background-size: cover;
     margin:0;
     padding:0;
     text-decoration:none;
     font-family:Arial, Helvetica, sans-serif;
-    background-size:cover;
+    
 }
 :root{
     --altura-h1: 3.5em;
@@ -15,10 +25,12 @@ body, html{
     width: 100%;
 	height: 100%;
     overflow-x:hidden;
+    margin:0;
+    font-family:Arial, Helvetica, sans-serif;
 }
 /*Cabeçalho*/
 header {
-    background-image:linear-gradient(to bottom, hsla(0, 0%, 0%, 0.5), hsla(0, 0%, 0%, 0.10), transparent);
+    background-image:linear-gradient(to bottom, hsla(0, 0%, 0%, 0.9),hsla(0, 0%, 0%, 0.45), hsla(0, 0%, 0%, 0.225), transparent);
     padding:5px 30px;
     display:flex;
     flex-wrap:wrap;
@@ -185,10 +197,10 @@ header nav a:active{
 
 /*Slider*/
 main .slider {
-    margin:0 auto;
+    margin:0px auto;
     position:relative;
     width:100%;
-    height:100vh;
+    height:75vh;
     user-select:none;
 	background-color: #555555;
 	box-shadow: 0 11px 22px rgba(0, 0, 0, 0.20), 0 7px 7px rgba(0, 0, 0, 0.24);
@@ -204,7 +216,7 @@ main .slide{
 }
 main #um{
     background-image:url(imagens/foto1.jpg);
-    background-position:left top; /*Muda de acordo com a foto*/
+    background-position:right 25%; /*Muda de acordo com a foto*/
 }
 main #dois{
     background-image:url(imagens/foto2.jpg);
@@ -296,8 +308,8 @@ main #tres{
 /*Slider Mobile*/
 @media (max-width:780px){
     main #um{
-        background-image:url(imagens/foto1-m.jpg);
-        background-position: top center;/*Muda de acordo com a foto*/
+        background-image:url(imagens/foto1.jpg);
+        background-position: right 25%;/*Muda de acordo com a foto*/
     }
     main #dois{
         background-image:url(imagens/foto2-m.jpg);
@@ -376,36 +388,94 @@ section h3{
     text-align:center;
 }
 section picture{
-    margin:10px;
+    margin:10px 10px 30px 10px;
     border-radius:4px;
     box-shadow:1px 1px 10px rgba(0, 0, 0, 0.5);
+    background-position:center;
 }
-.galeria1{
-    width:30%;
-    height:70vh;
-    background-image:url(imagens/galeria-1.jpg);
-    background-position:center center;
+.galeria-p{
+    width:calc(17.5% - 20px);
+    height:50h;
 }
-.galeria2{
-    width:calc(70% - 40px);
-    height:70vh;
-    background-image:url(imagens/galeria-2.jpg);
-    background-position:center center;
+.galeria-m{
+    width:calc(20% - 20px);
+    height:50vh;
 }
-@media (max-width:780px){
-    #g1, #g2{
+.galeria-g{
+    width:calc(32.5% - 20px);
+    height:50vh;
+}
+.galeria-gg{
+    width:calc(30% - 20px);
+    height:50vh;
+}
+@media (max-width:1150px){
+    .galeria-p{
+        width:calc(30% - 20px);
+    }
+    .galeria-m{
+        width:calc(40% - 20px);
+    }
+    .galeria-g{
+        width:calc(60% - 20px);
+    }
+    .galeria-gg{
+        width:calc(70% - 20px);
+    }
+}
+@media (max-width:680px){
+    #g1, #g2, #g3, #g4, #g5, #g6, #g7, #g8{
         width:100%;
         height:75vh;
     }
 }
+#g1{
+    background-image:url(imagens/galeria-1.jpg);
+}
+#g2{
+    background-image:url(imagens/galeria-2.jpg);
+}
+#g3{
+    background-image:url(imagens/galeria-3.jpg);
+}
+#g4{
+    background-image:url(imagens/galeria-4.jpg);
+}
+#g5{
+    background-image:url(imagens/galeria-5.jpg);
+}
+#g6{
+    background-image:url(imagens/galeria-6.jpg);
+}
+#g7{
+    background-image:url(imagens/galeria-7.jpg);
+}
+#g8{
+    background-image:url(imagens/galeria-8.jpg);
+}
+#g9{
+    background-image:url(imagens/galeria-9.jpg);
+}
+#g10{
+    background-image:url(imagens/galeria-10.jpg);
+}
+#g11{
+    background-image:url(imagens/galeria-11.jpg);
+}
+#g12{
+    background-image:url(imagens/galeria-12.jpg);
+}
+
 
 /*Base para Sobre, Aulas e Contato*/
 .fundo{
     background-image:url(imagens/fundo-sobre.jpg);
+    background-size: cover;
 }
 .base{
+    
     background-color:white;
-    max-width:850px;
+    max-width:1100px;
     height: calc(100vh - (10px + var(--altura-h1) + 1em + 30px));
     margin: calc(10px + var(--altura-h1) + 1em) auto 0px auto;
     padding:15px;
@@ -423,6 +493,11 @@ section picture{
     text-align:justify;
     text-indent:20px;
     font-size:1.1em;
+}
+@media (max-width:1500px){
+    .base{
+        max-width:850px;
+    }
 }
 @media (max-width:780px){
     .base{
